@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inconsolata:wght@200..900&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Lexend:wght@100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+
+body{
+    margin: 0;
+}
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.navbar-logo{
+    box-sizing: border-box;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70%;
+}
+.navbar-logo h1{
+    margin: 0;
+    font-family: 'Dancing Script', sans-serif;
+    color: rgb(176, 175, 175);
+    font-size: 45px;
+}
+.navbar-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    box-sizing: border-box;
+    width: 30%;
+    color: rgb(176, 175, 175);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    height: 100dvh;
+    background: linear-gradient(280deg, rgb(0, 0, 0) 0%, rgb(39, 39, 39) 100%);
+}
+.imagem-header{
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    z-index: 0;
+}
+.header-text{
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 5%;
+    height: 100%;
+    z-index: 1;
+    
+}
+.header-text h1{
+    color: rgb(145, 145, 145);
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 60px;
+}
+.header-text p{
+    color: rgb(176, 175, 175);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+}
+.header-text a{
+    padding: 20px;
+    border: 3px ridge rgb(65, 48, 7);
+    font-family: 'Quicksand', sans-serif;
+    color: goldenrod;
+    font-size: 18px;
+    transition-duration: 0.3s;
+}
+.header-text a:hover{
+    box-shadow: inset 0px 0px 0px 2px rgb(173, 131, 26);
+}
+
+ @-webkit-keyframes fade-in-first {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-first {
+	-webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 0.3s;
+}
+
+
+@-webkit-keyframes fade-in-second {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-second {
+	-webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 0.9s;
+}
+
+
+
+@-webkit-keyframes fade-in-third {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-third {
+	-webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 1.6s;
+}
+
