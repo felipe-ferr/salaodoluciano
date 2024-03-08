@@ -26,9 +26,9 @@ body{
 }
 .navbar-logo h1{
     margin: 0;
-    font-family: 'Dancing Script', sans-serif;
+    font-family: 'Lexend Zetta', sans-serif;
     color: rgb(176, 175, 175);
-    font-size: 45px;
+    font-size: 25px;
 }
 .navbar-links{
     display: flex;
