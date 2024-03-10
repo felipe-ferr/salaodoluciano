@@ -1,7 +1,20 @@
 
 :root{
-  --dourado: #49370a;
-  --cinza: rgb(73, 69, 69);
+  --dourado: #60490f;
+  --cinza: #494545;
+  --cinza-claro: #b5b5b5;
+}
+@font-face {
+  font-family: Montserrat-Thin;
+  src: url(fontes/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url(fontes/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Quicksand-Medium;
+  src: url(fontes/Quicksand-Medium.ttf);
 }
 body{
   margin: 0
@@ -29,9 +42,12 @@ nav .navbar-logo{
   font-family: 'Montserrat-Thin';
   font-size: 4vw;
 }
-.navbar-links{
+.navbar-menu{
   display: flex;
   justify-content: flex-end;
+}
+.navbar-links{
+  display: none;
 }
 header{
   grid-column: start / span 12;
@@ -43,35 +59,35 @@ header{
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  
+}
+.header-text{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   gap: 10px;
 }
-@font-face {
-  font-family: Montserrat-Thin;
-  src: url(fontes/Montserrat-Thin.ttf);
-}
-@font-face {
-  font-family: Lato-Regular;
-  src: url(fontes/Lato-Regular.ttf);
-}
-header h1{
+.header-text h1{
   font-family: 'Montserrat-Thin';
-  color: var(--dourado);
+  color: var(--cinza-claro);
   font-size: 15vw;
   margin: 0;
 }
-.header-subtitulo{
+.header-text-subtitulo{
   font-family: 'Lato-Regular';
-  color: var(--cinza);
+  color: var(--cinza-claro);
   font-size: 5vw;
   margin: 0;
 }
-.header-slogan{
+.header-text-slogan{
   font-family: 'Lato-Regular';
   color: var(--cinza);
-  font-size: 6vw;
+  font-size: 4vw;
   margin: 0;
 }
-header a{
+.header-text a{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,5 +97,200 @@ header a{
   text-decoration: none;
   font-family: 'Lato-Regular';
   font-size: 5vw;
-  color: var(--dourado);
+  color: var(--cinza-claro);
+  border-radius: 5px;
+}
+.header-services{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  bottom: 0;
+}
+.header-services span{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--cinza-claro);
+  font-family: 'Lato-Regular';
+  font-size: 3vw;
+}
+.header-social{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.header-social span{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--cinza-claro);
+  font-family: 'Lato-Regular';
+  font-size: 3vw;
+  gap: 5px;
+}
+
+@media only screen and (min-width: 768px){
+  .navbar-menu, .navbar-logo, .logo{
+    display: none;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+  }
+  nav{
+    display: flex;
+    box-sizing: border-box;
+    padding: 2%;
+    justify-content: space-between;
+    height: 15dvh;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: transparent
+  }
+  nav .navbar-links{
+    height: 100%;
+  }
+  .navbar-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cinza-claro);
+    text-decoration: none;
+    font-family: 'Quicksand-Medium';
+    font-size: 17px;
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.3s;
+    padding: 5px 2vw;
+  }
+  .navbar-links a:hover{
+    box-shadow: 0px 2px 0px 0px var(--dourado);
+    color: var(--dourado);
+  }
+  .navbar-links-logo{
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    margin-top: -2%;
+  }
+  header{
+    background-color: black;
+    background-position: top;
+    height: 100vh;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-image: url(imagem/fundo5.jpg);
+    background-size: cover;
+    transition-duration: 5s;
+  }
+  @keyframes header-animation{
+    25%{
+      background-image: url(imagem/fundo5.jpg)
+    }
+    50%{
+      background-image: url(imagem/fundo4.jpg)
+    }
+    85%{
+      background-image: url(imagem/fundo2.jpg)
+    }
+    100%{
+      background-image: url(imagem/fundo5.jpg)
+    }
+  }
+  ::selection{
+    background-color: var(--dourado);
+  }
+  .header-animation{
+    animation-duration: 50s;
+    animation-name: header-animation;
+    animation-iteration-count: infinite;
+  }
+  .header-image{
+    background-position: top;
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .header-text{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0% 10%;
+  }
+  .header-text h1{
+    font-family: 'Montserrat-Thin';
+    color: var(--cinza-claro);
+    font-size: 7vw;
+    margin: 0;
+  }
+  .header-text-subtitulo{
+    font-family: 'Montserrat-Thin';
+    font-weight: 600;
+    color: var(--cinza-claro);
+    font-size: 2vw;
+    margin: 0;
+  }
+  .header-text-slogan{
+    font-family: 'Montserrat-Thin';
+    font-weight: 600;
+    color: var(--cinza);
+    font-size: 1.2vw;
+    margin: 0;
+  }
+  .header-text a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--dourado);
+    padding: 2%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato-Regular';
+    font-size: 2vw;
+    color: var(--cinza-claro);
+    transition-duration: 0.5s;
+    border-radius: 5px;
+  }
+  .header-text a:hover{
+    box-shadow: inset 250px 0px 0px 0px var(--dourado);
+    color: black;
+  }
+  .header-services{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .header-services span{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--cinza-claro);
+    font-family: 'Lato-Regular';
+    font-size: 1.2vw;
+  }
+  .header-social{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .header-social span{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--cinza-claro);
+    font-family: 'Lato-Regular';
+    font-size: 1.1vw;
+    gap: 5px;
+  }
 }
