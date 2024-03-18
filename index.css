@@ -492,13 +492,22 @@ header{
   .services-container{
     grid-column: start / span 12;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-row: 3;
     background-color: var(--preto);
     overflow-x: hidden;
     width: 100%;
+    position: relative;
+  }
+  .services-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 0px;
   }
   .services-container h1, .info-container h1{
     font-family: 'Montserrat-Thin';
@@ -506,13 +515,18 @@ header{
     font-size: 5vw;
     margin: 0;
   }
+  .services-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+  }
   .services-card{
     display: flex;
-    align-items: first baseline;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 5px;
-    padding: 15px;
+    padding: 20px;
     box-sizing: border-box;
     overflow-x: hidden;
     width: 100%;
@@ -528,6 +542,7 @@ header{
     color: var(--cinza-claro);
     font-size: 1vw;
     margin: 0;
+    text-align: center;
   }
   .services-card, a, .info-card a{
     color: var(--dourado);
@@ -547,22 +562,51 @@ header{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 0% 10%;
     box-sizing: border-box;
-    height: 100%;
+    padding: 2%;
     border-top: 2px solid var(--dourado);
+    width: 100%;
   }
   .info-card{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
-    gap: 5px;
-    padding: 15px;
+    gap: 15px;
     box-sizing: border-box;
-    width: 100%;
+    padding: 5%;
+    width: 50%;
   }
-  .info-card iframe{
+  .info-images-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 5%;
+    gap: 5px;
+  }
+  .info-images1{
+    background-image: url(imagem/cabelo.jpg);
+    background-size: 100% 100%;
+    width: 40%;
+    height: 35vh;
+    margin-top: -15%;
+  }
+  .info-images2{
+    background-image: url(imagem/cabelorosa.jpg);
+    background-size: 100% 100%;
+    width: 40%;
+    height: 35vh;
+  }
+  .info-images3{
+    background-image: url(imagem/unha.jpg);
+    background-size: 100% 100%;
+    width: 40%;
+    height: 35vh;
+    margin-top: -15%;
+  }
+  .contato-card iframe{
     width: 70%;
     filter: grayscale(100%) invert(92%) contrast(83%);
   }
@@ -579,15 +623,13 @@ header{
     height: 50vh;
     border-radius: 5px;
   }
-  .transparent-desktop-left{
+  .transparent-desktop{
     font-family: 'Lato-Regular';
     color: rgba(79, 79, 79, 0.167);
     font-size: 10vw;
-    position: absolute;
-    overflow-x: hidden;
-    left: 0;
+    margin: 0;
     z-index: 0;
-    margin-bottom: 10%;
+    position: absolute;
   }
   .transparent-desktop-right{
     font-family: 'Lato-Regular';
